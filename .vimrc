@@ -14,13 +14,18 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+Plug 'preservim/nerdtree'
+
 call plug#end()
+
 " }}}
 
 
  " MAzEAMENTO --------------------------------------------------------------- {{{
 map <C-s> :write<CR>
 map q :quit<CR>
+map <C-t> :terminal<CR>
+map <C-o> :NERDTreeToggle<CR>
 
 " }}}
 
@@ -41,7 +46,8 @@ map q :quit<CR>
   set wildignore=*.jpg,*.png,*.gif,*.exe,*.img
   set nobackup
   set nowrap 
-
+  set wildmenu
+ 
 " Limpa a barra de status quando o vimrc é recarregado.
 set statusline=
 
@@ -88,6 +94,9 @@ set history=1000
   "Close all flods 'zm'
   "Close flod over cursor 'zc'
   "
+  "Open navigation directores 'Ctrl+O'
+  "Open terminal in vim 'Ctrl+T'
+  " Select others lines 'Ctrl+N'
   "
   "Ctrl + S = Save
   "Q = quit
